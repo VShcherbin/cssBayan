@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(214, 211, 183);
+    font-size: 2.4vw;
+    font-weight: 900;
+
+}
+
+h1 {
+    color: black !important;
+}
+
+
+
+.meme-box {
+    width: 95%;
+    margin: 4vh auto;
+}
+
+.meme-box:not(:hover) {
+    color: blue;
+}
+
+input {
+    display: contents;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: .1em solid black;
+}
+
+.title__cross {
+    visibility: hidden;
+    transition: all 0.2s 0s;
+    font-weight: 900;
+}
+
+.meme-box:hover .title__cross {
+    visibility: visible;
+
+}
+
+img {
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+    transition: all 0.4s 0.2s;
+}
+
+
+input:checked~img {
+    width: 60%;
+}
+
+input:checked~.title>.title__cross {
+    transform: rotate(45deg);
+}
+
+input:checked~.title {
+    color: black;
+}
+
+label {
+    transition: all 0.1s 0s;
+    background-color: red;
+}
+
+
+
+label:active {
+    filter: opacity(70%);
+    color: blue;
+}
